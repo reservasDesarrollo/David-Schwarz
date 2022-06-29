@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "1f883e51-d500-4626-a841-45306f5e6296",
+		"name": "Grupo Whatsapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19214707"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/login?user=sDavid&password=Corralon2021cac",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "sDavid"
+						},
+						{
+							"key": "password",
+							"value": "Corralon2021cac"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Participante",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJjb25zdHJ1eWFKV1QiLCJzdWIiOiJzRGF2aWQiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjU2NDQzNzc0LCJleHAiOjE2NTY0ODcyNzR9.Qwcv37hF1J2_q5XHuyovuIOHNNgA8mL2F-M9dILnpe9eEl0W-5uBSIMFHuEu9PkCL5RAELcOTL_X8DGsYDr0YA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{                \r\n            \"telefono\": 4444444            \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/Participante/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"Participante",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll Participante",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJjb25zdHJ1eWFKV1QiLCJzdWIiOiJzRGF2aWQiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjU2NDQzNzc0LCJleHAiOjE2NTY0ODcyNzR9.Qwcv37hF1J2_q5XHuyovuIOHNNgA8mL2F-M9dILnpe9eEl0W-5uBSIMFHuEu9PkCL5RAELcOTL_X8DGsYDr0YA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/Participante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"Participante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Grupo Whatsapp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJjb25zdHJ1eWFKV1QiLCJzdWIiOiJzRGF2aWQiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjU2NDQzNzc0LCJleHAiOjE2NTY0ODcyNzR9.Qwcv37hF1J2_q5XHuyovuIOHNNgA8mL2F-M9dILnpe9eEl0W-5uBSIMFHuEu9PkCL5RAELcOTL_X8DGsYDr0YA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n         \r\n    \"nombre\": \"Grupo-Amigos2\",\r\n     \"participantes\":[\r\n    {\r\n        \"idParticipante\": 1,\r\n        \"telefono\": 111111111\r\n    },\r\n    {\r\n        \"idParticipante\": 2,\r\n        \"telefono\": 2222222\r\n    },\r\n    {\r\n        \"idParticipante\": 3,\r\n        \"telefono\": 333333\r\n    },\r\n    {\r\n        \"idParticipante\": 4,\r\n        \"telefono\": 4444444\r\n    }\r\n]\r\n            \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/Grupo/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"Grupo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Group",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJjb25zdHJ1eWFKV1QiLCJzdWIiOiJzRGF2aWQiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjU2NDQzNzc0LCJleHAiOjE2NTY0ODcyNzR9.Qwcv37hF1J2_q5XHuyovuIOHNNgA8mL2F-M9dILnpe9eEl0W-5uBSIMFHuEu9PkCL5RAELcOTL_X8DGsYDr0YA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n         \r\n    \"nombre\": \"Grupo-Amigos2\",\r\n     \"participantes\":[\r\n    {\r\n        \"idParticipante\": 1,\r\n        \"telefono\": 111111111\r\n    },\r\n    {\r\n        \"idParticipante\": 2,\r\n        \"telefono\": 2222222\r\n    },\r\n    {\r\n        \"idParticipante\": 3,\r\n        \"telefono\": 333333\r\n    },\r\n    {\r\n        \"idParticipante\": 4,\r\n        \"telefono\": 4444444\r\n    }\r\n]\r\n            \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/Grupo/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"Grupo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJjb25zdHJ1eWFKV1QiLCJzdWIiOiJzRGF2aWQiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjU2NDQzNzc0LCJleHAiOjE2NTY0ODcyNzR9.Qwcv37hF1J2_q5XHuyovuIOHNNgA8mL2F-M9dILnpe9eEl0W-5uBSIMFHuEu9PkCL5RAELcOTL_X8DGsYDr0YA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n         \r\n    \"mensaje\": \"Hola Buen dia!\",\r\n    \"participante\":\r\n        {\r\n            \"idParticipante\": 1,\r\n            \"telefono\": 111111111\r\n        },\r\n    \"grupo\":\r\n        {\r\n        \"idGrupo\": 1        \r\n        }\r\n            \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/Mensaje/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"Mensaje",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
